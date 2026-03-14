@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON & XML Viewer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="mode-switch">
+        <span id="jsonBtn" class="active">JSON Viewer</span>
+        <span id="xmlBtn">XML Viewer</span>
+    </div>
+
+    <div id="devBtn" class="dev-btn">👨‍💻</div>
+</header>
+
+<div class="sub-tabs">
+    <div id="rawTab" class="active">Raw Data</div>
+    <div id="formatTab">Format</div>
+    <div id="viewTab">View</div>
+</div>
+
+<div class="container">
+
+    <div id="rawSection">
+        <textarea id="inputData" placeholder="Paste JSON or XML here..."></textarea>
+    </div>
+
+    <div id="formatSection" style="display:none;">
+        <pre id="formattedOutput"></pre>
+    </div>
+
+    <div id="viewSection" style="display:none;">
+        <div id="treeOutput" class="tree"></div>
+    </div>
+
+</div>
+
+<div id="menu" class="context-menu"></div>
+
+<!-- Developer Modal -->
+
+<div id="devModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeDev">✖</span>
+
+        <h2>👨‍💻 Developer Info</h2>
+
+        <p><b>Name:</b> Ramashesha Sharma</p>
+        <p><b>Role:</b> Software Developer</p>
+        <p><b>Version:</b> 1.0</p>
+        <p><b>Contact:</b> ramasheshasharma.1710@gmail.com</p>
+
+        <div class="footer-note">
+            JSON & XML Viewer Tool<br>
+            Built with JavaScript 🚀
+        </div>
+    </div>
+</div>
+
+<script src="js/tree-json.js"></script>
+<script src="js/tree-xml.js"></script>
+<script src="js/context-menu.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
